@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Loopice Engineering</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    function handleSubmit(event) {
+      const fileInput = document.getElementById('attachment');
+      if (!fileInput.value) {
+        alert('No file selected. Your message will be sent without an attachment.');
+      }
+      // For mailto, let the form submit as normal
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="nav-left">
+        <span class="company-name">LOOPICE ENGINEERING</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="why-choose-us.html">Why Choose Us</a>
+        <a href="our-expertise.html">Our Expertise</a>
+        <a href="contact.html" class="active">Contact Us</a>
+      </nav>
+      <div class="nav-logo">
+        <img src="file_00000000c700622f84b402b41c487705.png" alt="Loopice Logo">
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="profile-section">
+      <h1 class="profile-title">CONTACT US</h1>
+      <div class="profile-content" style="max-width:500px;margin:auto;">
+        <form action="mailto:your@email.com" method="POST" enctype="text/plain" onsubmit="handleSubmit(event)" class="animated-form">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <label for="attachment">Attach File:</label>
+          <input type="file" id="attachment" name="attachment">
+
+          <button type="submit">Send</button>
+        </form>
+        <p style="font-size:0.95rem;color:#888;margin-top:1rem;">If no file is selected, your message will be sent without an attachment.</p>
+      </div>
+    </section>
+    <button id="hamburger" class="hamburger" aria-label="Open menu" onclick="openSidebar()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div id="sidebar-overlay" class="sidebar-overlay" onclick="closeSidebar()"></div>
+    <aside id="sidebar" class="sidebar-menu">
+      <button class="close-btn" aria-label="Close menu" onclick="closeSidebar()">&times;</button>
+      <nav class="sidebar-nav">
+        <a href="index.html">Home</a>
+        <a href="why-choose-us.html">Why Choose Us</a>
+        <a href="our-expertise.html">Our Expertise</a>
+        <a href="contact.html" class="active">Contact Us</a>
+      </nav>
+    </aside>
+  </main>
+  <footer>
+    <div class="footer-content">
+      &copy; 2025 Loopice Engineering. All rights reserved.
+    </div>
+  </footer>
+  <script>
+    function openSidebar() {
+      document.getElementById('sidebar').classList.add('open');
+      document.getElementById('sidebar-overlay').classList.add('show');
+    }
+    function closeSidebar() {
+      document.getElementById('sidebar').classList.remove('open');
+      document.getElementById('sidebar-overlay').classList.remove('show');
+    }
+    window.addEventListener('resize', function() {
+      if(window.innerWidth > 600) {
+        closeSidebar();
+      }
+    });
+  </script>
+</body>
+</html> 

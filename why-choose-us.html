@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Choose Us - Loopice Engineering</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="nav-left">
+        <span class="company-name">LOOPICE ENGINEERING</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="why-choose-us.html" class="active">Why Choose Us</a>
+        <a href="our-expertise.html">Our Expertise</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <div class="nav-logo">
+        <img src="file_00000000c700622f84b402b41c487705.png" alt="Loopice Logo">
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="profile-section">
+      <div class="expertise-section" style="justify-content:center;">
+        <div class="expertise-card" style="max-width:600px;">
+          <h1 class="profile-title" style="margin-bottom:1.2rem;">WHY CHOOSE US</h1>
+          <div class="profile-content" style="text-align:left;">
+            <ul>
+              <li><b>Planning & Coordination:</b> Define project scope, set objectives, allocate resources, and develop timelines to ensure all tasks align with strategic goals.</li>
+              <li><b>Execution & Monitoring:</b> Lead teams, manage risks, track progress, and adjust plans as needed to deliver results on time and within budget.</li>
+              <li><b>Precision in Design:</b> We deliver high-quality engineering documents tailored to project needs.</li>
+              <li><b>Compliance & Safety:</b> Designs adhere to international standards (ASME, API, IEC, ISA, ATEX) and hazardous area classifications.</li>
+              <li><b>Vendor-Ready Deliverables:</b> Our engineering packages are optimized for procurement and vendor engagement, reducing lead times.</li>
+              <li><b>Value Engineering:</b> We identify cost-saving opportunities without compromising performance or safety.</li>
+              <li><b>Experienced Team:</b> Our engineers bring deep domain expertise in oil & gas, petrochemical, and industrial automation sectors.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-content">
+      &copy; 2025 Loopice Engineering. All rights reserved.
+    </div>
+  </footer>
+  <button id="hamburger" class="hamburger" aria-label="Open menu" onclick="openSidebar()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div id="sidebar-overlay" class="sidebar-overlay" onclick="closeSidebar()"></div>
+  <aside id="sidebar" class="sidebar-menu">
+    <button class="close-btn" aria-label="Close menu" onclick="closeSidebar()">&times;</button>
+    <nav class="sidebar-nav">
+      <a href="index.html">Home</a>
+      <a href="why-choose-us.html" class="active">Why Choose Us</a>
+      <a href="our-expertise.html">Our Expertise</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </aside>
+  <script>
+    function openSidebar() {
+      document.getElementById('sidebar').classList.add('open');
+      document.getElementById('sidebar-overlay').classList.add('show');
+    }
+    function closeSidebar() {
+      document.getElementById('sidebar').classList.remove('open');
+      document.getElementById('sidebar-overlay').classList.remove('show');
+    }
+    window.addEventListener('resize', function() {
+      if(window.innerWidth > 600) {
+        closeSidebar();
+      }
+    });
+  </script>
+</body>
+</html> 
